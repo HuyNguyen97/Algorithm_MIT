@@ -20,6 +20,7 @@ void insertion_sort(vector<int>& arr) {
 }
 
 int main() {
+	
 	vector<int> arr(10);
 	for(int i=0;i<10;i++){
 		cin>>arr[i];
