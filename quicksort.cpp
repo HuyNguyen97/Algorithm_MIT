@@ -22,7 +22,9 @@ void quicksort(vector<int>& arr, int l, int r) {
 			right--;
 		}
 	}
-	swap(arr[l],arr[right]);       
+	if(arr[pivot] > arr[right]){
+		swap(arr[l],arr[right]);
+	}     
 	quicksort(arr, l, right - 1);
 	quicksort(arr, right + 1,r);
 }
