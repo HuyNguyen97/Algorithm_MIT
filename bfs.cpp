@@ -19,29 +19,6 @@ bool compare(int a, int b) {
 	if (a > b) return true;
 }
 
-void dfs(vector<vector<int> > &G, int root) {
-	bool visited[100];
-	for (int i = 0; i < 100; i++) {
-		visited[i] = false;
-	}
-	stack<int> st;
-	st.push(root);
-	int u;
-	while (!st.empty()) {
-		u = st.top();
-		st.pop();
-		if (visited[u] == false) {
-			cout << "Visiting " << u << endl;;
-			visited[u] = true;
-		}
-		for (int i = 0; i < G[u].size(); i++) {
-			if (visited[G[u][i]] == false) {
-				int next = G[u][i];
-				st.push(next);
-			}
-		}
-	}
-}
 
 void bfs(vector<vector<int> > &G, int root) {
 	bool visited[200];
